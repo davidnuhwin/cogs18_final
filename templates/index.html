@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room 3404</title>
+</head>
+<!-- flask structure source: https://www.youtube.com/watch?v=QnDWIZuWYW0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=2-->
+<body>
+    {% for room in dorm_suite %}
+        <h1> {{ room.area }}</h1>
+        <p> {{ room.description }}</p>
+        <p> {{ room.objects }}</p>
+        
+    {% endfor %}
+</body>
+
+</html>
