@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Room 3404</title>
+    <title>home</title>
 </head>
-<!-- flask structure source: https://www.youtube.com/watch?v=QnDWIZuWYW0&list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH&index=2-->
 <body>
-    {% for room in dorm_suite %}
-        <h1> {{ room.area }}</h1>
-        <p> {{ room.description }}</p>
-        <p> {{ room.objects }}</p>
-        
-    {% endfor %}
-</body>
+    <h1>Welcome to the Dorm Tour Chatbot</h1>
 
+        <p>Ask me about a room in the dorm!</p>
+        <ol>
+            <li> What is this about?</li>
+            <li> The Kitchen </li>
+            <li> The Living Room </li>
+        </ol>
+
+    <!-- Chat form -->
+     <!-- https://www.w3schools.com/html/html_forms.asp-->
+    <form id="chat-form" action="/chat" method="POST">
+        <input type="text" name="message" placeholder="Ask me a question...">
+        <button type="submit">Send</button>
+    </form>
+</body>
 </html>
