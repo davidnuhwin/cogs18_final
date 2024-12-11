@@ -8,19 +8,31 @@
 </head>
 <body>
     <h1>Welcome to the Dorm Tour Chatbot</h1>
+    <img src="{{ url_for('static', filename='img/front.JPG') }}" alt="Front Door" width="300" length="300">
 
-        <p>Ask me about a room in the dorm!</p>
+
+        <p>Ask me about a room in the dorm! Make sure to include the room's name in your request!</p>
         <ol>
             <li> What is this about?</li>
-            <li> The Kitchen </li>
-            <li> The Living Room </li>
+            <li> Kitchen </li>
+            <li> Living Room </li>
+            <li> Sinks </li>
+            <li> Room2 (Yes with the 2 sticking to the word Room)</li>
         </ol>
 
+    <!-- Source https://www.w3schools.com/html/html_forms.asp-->    
     <!-- Chat form -->
-     <!-- https://www.w3schools.com/html/html_forms.asp-->
     <form id="chat-form" action="/chat" method="POST">
         <input type="text" name="message" placeholder="Ask me a question...">
         <button type="submit">Send</button>
     </form>
+    <!-- Random room button -->
+    <form action="/chat" method="POST" style="margin-top: 20px;">
+        <!--Sends random to the server to avoid errors-->
+        <input type="hidden" name="message" value="random">
+        <button type="submit">Get a Random Room</button>
+</form>
+<br>
+<a href="/quiz"> <button> Try The Quiz! </button></a>
 </body>
 </html>
