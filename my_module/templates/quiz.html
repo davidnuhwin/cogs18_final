@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+<!-- Source Jinja2 from https://ttl255.com/jinja2-tutorial-part-2-loops-and-conditionals/#loops
+https://documentation.bloomreach.com/engagement/docs/jinja-syntax-->
+    <h1>Dorm Quiz</h1>
+    <p>{{ question["question"] }}</p>
+    <form action="/quiz" method="POST">
+        {% for option in question["options"] %}
+            <input type="radio" name="answer" value="{{ option }}" required> {{ option }}<br>
+        {% endfor %}
+        <button type="submit">Submit</button>
+    </form>
+    <br>
+    <a href="/">Back to Home</a>
+</body>
+</html>

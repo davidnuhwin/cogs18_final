@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Room</title>
+</head>
+<body>
+<!-- Source Jinja2 from https://ttl255.com/jinja2-tutorial-part-2-loops-and-conditionals/#loops
+https://documentation.bloomreach.com/engagement/docs/jinja-syntax-->
+    <h1>Random Room</h1>
+    <img src="/static/img/dice.JPG" width="500">
+    <h2>{{ room['area'] }}</h2>
+    <p>Description: {{ room['description'] }}</p>
+    <p>Objects: {{ room['objects'] }}</p>
+    <a href="/">Back to Home</a>
+</body>
+</html>

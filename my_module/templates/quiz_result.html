@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+</head>
+<body>
+<!-- Source Jinja2 from https://ttl255.com/jinja2-tutorial-part-2-loops-and-conditionals/#loops
+https://documentation.bloomreach.com/engagement/docs/jinja-syntax-->
+    <h1>Quiz Result</h1>
+    {% if correct %}
+        <p>😺 Hoorah Welcome to Room 3404!</p>
+    {% else %}
+        <p>😡 If you were a real one you'd know the answer: {{ answer }}.</p>
+    {% endif %}
+    <a href="/quiz">Try Again</a>
+    <a href="/">Back to Home</a>
+</body>
+</html>
